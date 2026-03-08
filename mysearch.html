@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>mingle</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="nav-right">
+
+<a href="#"></a>
+<span class="material-icons gmail">email</span>
+<a href="#"></a>
+<span class="material-icons gmail">home</span>
+
+<span class="material-icons apps">widgets</span>
+
+<img src="https://i.pravatar.cc/40" class="profile">
+
+</div>
+
+</header>
+
+
+<!-- MAIN CONTENT -->
+<main>
+
+<h1 class="logo">Mingle</h1>
+
+<div class="search-box">
+
+<span class="material-icons search-icon">search</span>
+
+<input type="text" id="searchInput" placeholder="Search the web...">
+
+<span class="material-icons mic">add</span>
+
+</div>
+
+<div class="buttons">
+
+<button id="searchBtn">Search</button>
+
+<button>I'm Feeling Lucky</button>
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>Indonesia</p>
+
+</footer>
+
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+
+/* HEADER */
+
+header{
+margin-left:auto;
+display:flex;
+align-items:center;
+gap:15px;
+padding: 15px;
+}
+
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.nav-right a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+.apps{
+cursor:pointer;
+}
+
+.profile{
+width:35px;
+height:35px;
+border-radius:50%;
+cursor:pointer;
+}
+
+
+
+
+/* MAIN */
+
+main{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:30px;
+}
+
+.logo{
+font-size:60px;
+font-weight:bold;
+color:#276ad6;
+}
+
+
+/* SEARCH BOX */
+
+.search-box{
+display:flex;
+align-items:center;
+border:1px solid #ddd;
+border-radius:50px;
+padding:10px 20px;
+width:500px;
+gap:10px;
+box-shadow:0 1px 6px rgba(0,0,0,0.1);
+}
+
+.search-box input{
+flex:1;
+border:none;
+outline:none;
+font-size:16px;
+}
+
+.search-icon{
+color:#222121;
+}
+
+.mic{
+color:#061630;
+cursor:pointer;
+}
+
+
+/* BUTTONS */
+
+.buttons{
+display:flex;
+gap:10px;
+}
+
+.buttons button{
+padding:10px 15px;
+border:none;
+background:#e6db80;
+cursor:pointer;
+border-radius:4px;
+font-family: Arial, Helvetica, sans-serif
+
+}
+
+.buttons button:hover{
+border:1px solid #ddd;
+}
+
+
+/* FOOTER */
+
+footer{
+padding:15px 30px;
+background:#f2f2f2;
+font-size:14px;
+border-radius:10px;
+
+}
+
+.logo{
+    font-size:50px;
+    font-weight:bold;
+    text-align:center;
+
+    /* gradient text */
+    background: linear-gradient(90deg, #f3f363, #ee0979, #00c6ff, #0072ff);
+    background-size:300%;
+    
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation: textMove 5s linear infinite,
+               float 3s ease-in-out infinite;
+}
+
+/* animasi warna bergerak */
+@keyframes textMove{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+/* animasi naik turun */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+
+</style>
+
+<script>
+    const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("searchInput");
+
+searchBtn.addEventListener("click", function(){
+
+let query = searchInput.value;
+
+if(query !== ""){
+    
+alert("Searching for: " + query);
+
+/* nanti bisa diarahkan ke halaman hasil */
+
+}
+
+});
+</script>
+
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Animated Cat Background</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="scene">
+
+<div class="sun"></div>
+
+<div class="cloud"></div>
+<div class="cloud cloud2"></div>
+
+<div class="cat"></div>
+
+<div class="birds">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="fence"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+font-family:sans-serif;
+}
+
+/* SKY BACKGROUND */
+
+.scene{
+position:relative;
+width:100%;
+height:100vh;
+
+background:linear-gradient(
+to top,
+#f6a57a,
+#f8c48b,
+#f7a7a6,
+#cfa0d8
+);
+
+}
+
+/* SUN */
+
+.sun{
+
+position:absolute;
+width:200px;
+height:200px;
+background:#fff3b0;
+
+border-radius:50%;
+
+left:50%;
+top:40%;
+
+transform:translate(-50%,-50%);
+
+box-shadow:0 0 60px #ffd27f;
+
+}
+
+/* CLOUD */
+
+.cloud{
+
+position:absolute;
+
+width:200px;
+height:60px;
+
+background:white;
+border-radius:50px;
+
+top:30%;
+left:-200px;
+
+animation:cloudMove 40s linear infinite;
+
+}
+
+.cloud2{
+
+top:25%;
+animation-duration:55s;
+
+}
+
+@keyframes cloudMove{
+
+0%{
+left:-200px;
+}
+
+100%{
+left:110%;
+}
+
+}
+
+/* CAT */
+
+.cat{
+
+position:absolute;
+
+width:40px;
+height:80px;
+
+background:#4b2e2e;
+
+bottom:170px;
+left:50%;
+
+transform:translateX(-50%);
+
+border-radius:20px 20px 10px 10px;
+
+animation:catMove 3s ease-in-out infinite alternate;
+
+}
+
+/* CAT EARS */
+
+.cat::before,
+.cat::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+height:0;
+
+border-left:10px solid transparent;
+border-right:10px solid transparent;
+border-bottom:15px solid #4b2e2e;
+
+top:-10px;
+
+}
+
+.cat::before{
+left:0;
+}
+
+.cat::after{
+right:0;
+}
+
+/* CAT ANIMATION */
+
+@keyframes catMove{
+
+0%{
+transform:translateX(-50%) translateY(0px);
+}
+
+100%{
+transform:translateX(-50%) translateY(-5px);
+}
+
+}
+
+/* FENCE */
+
+.fence{
+
+position:absolute;
+
+bottom:150px;
+
+width:100%;
+height:10px;
+
+background:#7b5a40;
+
+box-shadow:
+0 20px 0 #7b5a40,
+0 -20px 0 #7b5a40;
+
+}
+
+/* BIRDS */
+
+.birds span{
+
+position:absolute;
+
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:black;
+
+top:20%;
+
+animation:birdFly 20s linear infinite;
+
+}
+
+.birds span:nth-child(2){
+top:22%;
+animation-duration:25s;
+}
+
+.birds span:nth-child(3){
+top:18%;
+animation-duration:18s;
+}
+
+@keyframes birdFly{
+
+0%{
+left:-10%;
+}
+
+100%{
+left:110%;
+}
+
+}
+
+.scene{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+z-index:-1; /* membuat background berada di belakang */
+
+background:linear-gradient(
+to top,
+#f6a57a,
+#f8c48b,
+#f7a7a6,
+#cfa0d8
+);
+}
+</style>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
